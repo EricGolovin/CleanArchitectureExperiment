@@ -13,7 +13,7 @@ public class HomeViewModel {
     
     public protocol Delegate: AnyObject {
         func homeViewModelDidTapTask()
-        func homeViewModelDidTapOnboading()
+        func homeViewModelDidTapOnboarding()
         func homeViewModelDidTapSurvey()
     }
     
@@ -36,7 +36,7 @@ public class HomeViewModel {
     }
 
     func openOnboardingTapped() {
-        delegate?.homeViewModelDidTapOnboading()
+        delegate?.homeViewModelDidTapOnboarding()
         counter += 1
     }
     

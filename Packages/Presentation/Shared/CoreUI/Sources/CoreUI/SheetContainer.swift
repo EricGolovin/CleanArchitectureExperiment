@@ -8,14 +8,25 @@
 import Foundation
 
 @Observable
-public final class SheetContainer<Path: Identifiable> {
+public final class SheetContainer<Path: Hashable> {
     
-    public var path: Path? {
+    public struct IdentifiableAdapter: Identifiable {
+        
+        public var id: Int { value.hashValue }
+        
+        public let value: Path
+    }
+    
+    public var path: IdentifiableAdapter? {
         didSet {
             if path == nil {
                 navigationContainer.popLast()
             }
         }
+    }
+    
+    public func setPath(_ path: Path) {
+        self.path = IdentifiableAdapter(value: path)
     }
     
     private let navigationContainer: NavigationContainer

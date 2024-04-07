@@ -25,12 +25,12 @@ public extension View {
         modifier(FullScreenSheetItemModifier<Item, Content>(item: item, onDismiss: onDismiss, sheetContent: content))
     }
     
-    func fullScreenSheet<Path: Identifiable, Content: View>(
+    func fullScreenSheet<Path: Hashable, Content: View>(
         container: Binding<SheetContainer<Path>>,
         onDismiss: (() -> Void)? = nil,
-        @ViewBuilder content: @escaping (Path) -> Content
+        @ViewBuilder content: @escaping (SheetContainer<Path>.IdentifiableAdapter) -> Content
     ) -> some View {
-        modifier(FullScreenSheetItemModifier<Path, Content>(item: container.path, onDismiss: onDismiss, sheetContent: content))
+        modifier(FullScreenSheetItemModifier<SheetContainer<Path>.IdentifiableAdapter, Content>(item: container.path, onDismiss: onDismiss, sheetContent: content))
     }
 }
 

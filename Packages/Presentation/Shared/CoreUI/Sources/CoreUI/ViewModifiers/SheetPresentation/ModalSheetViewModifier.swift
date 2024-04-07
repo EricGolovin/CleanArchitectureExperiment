@@ -25,12 +25,12 @@ public extension View {
         modifier(ModalSheetItemModifier<Item, Content>(item: item, onDismiss: onDismiss, sheetContent: content))
     }
     
-    func modalSheet<Path: Identifiable, Content: View>(
+    func modalSheet<Path: Hashable, Content: View>(
         container: Binding<SheetContainer<Path>>,
         onDismiss: (() -> Void)? = nil,
-        @ViewBuilder content: @escaping (Path) -> Content
+        @ViewBuilder content: @escaping (SheetContainer<Path>.IdentifiableAdapter) -> Content
     ) -> some View {
-        modifier(ModalSheetItemModifier<Path, Content>(item: container.path, onDismiss: onDismiss, sheetContent: content))
+        modifier(ModalSheetItemModifier<SheetContainer<Path>.IdentifiableAdapter, Content>(item: container.path, onDismiss: onDismiss, sheetContent: content))
     }
 }
 

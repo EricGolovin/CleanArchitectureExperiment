@@ -6,27 +6,37 @@
 //
 
 import SwiftUI
+import CoreUI
 
-public struct HomeCoordinatorView<TaskView: View, OnboardingView: View, SurveyView: View>: View {
+public struct HomeCoordinatorView<TaskCoordinator: Coordinator, OnboardingCoordinator: Coordinator, SurveyCoordinator: Coordinator>: View {
     
-    @State private var coordinator: HomeCoordinator<TaskView, OnboardingView, SurveyView>
+    public typealias Coordinator = HomeCoordinator<TaskCoordinator, OnboardingCoordinator, SurveyCoordinator>
     
-    public init(coordinator: HomeCoordinator<TaskView, OnboardingView, SurveyView>) {
+    @State private var coordinator: Coordinator
+    
+    public init(coordinator: Coordinator) {
         self.coordinator = coordinator
-        
-        print("⭐️ HomeCoordinatorView init")
     }
     
     public var body: some View {
         HomeView(viewModel: coordinator.viewModel)
-            .navigationDestination(for: HomeCoordinator.NavigationPath.self) {
-                coordinator.buildView(for: $0)
+            .navigationDestination(for: Coordinator.NavigationPath.self) {
+                switch $0 {
+                case .task(let coordinator):
+                    coordinator.buildRootView()
+                }
             }
-            .modalSheet(container: $coordinator.modalSheetContainer) { path in
-                coordinator.buildView(for: path)
+            .modalSheet(container: $coordinator.modalSheetContainer) {
+                switch $0.value {
+                case .onboarding(let coordinator):
+                    coordinator.buildRootView()
+                }
             }
             .fullScreenSheet(container: $coordinator.fullScreenSheetContainer) {
-                coordinator.buildView(for: $0)
+                switch $0.value {
+                case .survey(let coordinator):
+                    coordinator.buildRootView()
+                }
             }
     }
 }

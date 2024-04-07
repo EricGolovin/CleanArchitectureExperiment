@@ -20,8 +20,7 @@ public enum ContainerScope {
     case container
 }
 
-
-public class DependencyContainer: ObservableObject, Resolver {
+public class DependencyContainer: Resolver {
     
     private var factories: [ObjectIdentifier: @MainActor (Resolver) -> Any] = [:]
     private var containerObjects: [ObjectIdentifier: Any] = [:]

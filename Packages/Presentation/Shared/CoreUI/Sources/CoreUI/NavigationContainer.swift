@@ -8,6 +8,11 @@
 import Observation
 import SwiftUI
 
+public protocol Coordinator: Hashable {
+    associatedtype T: View
+    func buildRootView() -> T
+}
+
 @Observable
 public final class NavigationContainer {
     

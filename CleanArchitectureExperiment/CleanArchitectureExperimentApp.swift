@@ -12,15 +12,29 @@ import HomeFlow
 @main
 struct CleanArchitectureExperimentApp: App {
     
-    @StateObject private var dependencyContainer = provideDependencyContainer()
-    @State private var navigationContainer = NavigationContainer()
+    @State private var dependencyContainer: DependencyContainer
+    @State private var navigationContainer: NavigationContainer
+    @State private var homeCoordinator: DependencyContainer.HomeFlowCoordinator
+    
+    init() {
+        let dependencyContainer = Self.provideDependencyContainer()
+        self.dependencyContainer = dependencyContainer
+        
+        let navigationContainer = NavigationContainer()
+        self.navigationContainer = navigationContainer
+        
+        self.homeCoordinator = dependencyContainer.provideHomeCoordinator(navigationContainer: navigationContainer)
+    }
     
     var body: some Scene {
         WindowGroup {
-            HomeCoordinatorView(coordinator: dependencyContainer.provideHomeCoordinator(navigationContainer: navigationContainer))
+            NavigationStack(path: $navigationContainer.path) {
+                HomeCoordinatorView(coordinator: homeCoordinator)
+            }
         }
     }
     
+    @MainActor
     private static func provideDependencyContainer() -> DependencyContainer {
         let container = DependencyContainer()
         container.registerNetworkBox()

@@ -10,92 +10,64 @@ import SwiftUI
 import CoreUI
 
 @Observable
-public class HomeCoordinator<TaskView: View, OnboardingView: View, SurveyView: View>: HomeViewModel.Delegate {
+public class HomeCoordinator<TaskCoordinator: Coordinator, OnboardingCoordinator: Coordinator, SurveyCoordinator: Coordinator>: HomeViewModel.Delegate {
     
-    enum NavigationPath {
-        case task
+    enum NavigationPath: Hashable {
+        case task(TaskCoordinator)
     }
     
-    enum ModalSheetPath: Identifiable {
-        case onboarding
-        
-        var id: Int { hashValue }
+    enum ModalSheetPath: Hashable {
+        case onboarding(OnboardingCoordinator)
     }
     
-    enum FullScreenSheetPath: Identifiable {
-        case survey
-        
-        var id: Int { hashValue }
+    enum FullScreenSheetPath: Hashable {
+        case survey(SurveyCoordinator)
     }
     
     let navigationContainer: NavigationContainer
     var modalSheetContainer: SheetContainer<ModalSheetPath>
     var fullScreenSheetContainer: SheetContainer<FullScreenSheetPath>
     let viewModel: HomeViewModel
-    
-    private let taskView: () -> TaskView
-    private let onboardingView: (@escaping () -> Void) -> OnboardingView
-    private let surveyView: (@escaping () -> Void) -> SurveyView
+
+    private let taskCoordinator: () -> TaskCoordinator
+    private let onboardingCoordinator: (@escaping () -> Void) -> OnboardingCoordinator
+    private let surveyCoordinator: (@escaping () -> Void) -> SurveyCoordinator
     
     public init(
         navigationContainer: NavigationContainer,
         viewModel: HomeViewModel,
-        taskView: @escaping () -> TaskView,
-        onboardingView: @escaping (@escaping () -> Void) -> OnboardingView,
-        surveyView: @escaping (@escaping () -> Void) -> SurveyView
+        taskCoordinator: @escaping () -> TaskCoordinator,
+        onboardingCoordinator: @escaping (@escaping () -> Void) -> OnboardingCoordinator,
+        surveyCoordinator: @escaping (@escaping () -> Void) -> SurveyCoordinator
     ) {
         self.navigationContainer = navigationContainer
         modalSheetContainer = SheetContainer(navigationContainer)
         fullScreenSheetContainer = SheetContainer(navigationContainer)
         self.viewModel = viewModel
-        self.taskView = taskView
-        self.onboardingView = onboardingView
-        self.surveyView = surveyView
-        
-        print("⭐️ HomeCoordinator init")
-    }
-    
-    @ViewBuilder
-    func buildView(for path: NavigationPath) -> some View {
-        switch path {
-        case .task:
-            taskView()
-        }
-    }
-    
-    @ViewBuilder
-    func buildView(for path: ModalSheetPath) -> some View {
-        switch path {
-        case .onboarding:
-            onboardingView { [weak self] in
-                guard let self else { return }
-                modalSheetContainer.path = nil
-            }
-        }
-    }
-    
-    @ViewBuilder
-    func buildView(for path: FullScreenSheetPath) -> some View {
-        switch path {
-        case .survey:
-            surveyView { [weak self] in
-                guard let self else { return }
-                fullScreenSheetContainer.path = nil
-            }
-        }
+        self.taskCoordinator = taskCoordinator
+        self.onboardingCoordinator = onboardingCoordinator
+        self.surveyCoordinator = surveyCoordinator
     }
 
     // MARK: HomeViewModel.Delegate conformance
     
     public func homeViewModelDidTapTask() {
-        navigationContainer.push(NavigationPath.task)
+        navigationContainer.push(NavigationPath.task(taskCoordinator()))
     }
     
-    public func homeViewModelDidTapOnboading() {
-        modalSheetContainer.path = .onboarding
+    public func homeViewModelDidTapOnboarding() {
+        let coordinator = onboardingCoordinator { [weak self] in
+            guard let self else { return }
+            modalSheetContainer.path = nil
+        }
+        modalSheetContainer.setPath(.onboarding(coordinator))
     }
     
     public func homeViewModelDidTapSurvey() {
-        fullScreenSheetContainer.path = .survey
+        let coordinator = surveyCoordinator { [weak self] in
+            guard let self else { return }
+            fullScreenSheetContainer.path = nil
+        }
+        fullScreenSheetContainer.setPath(.survey(coordinator))
     }
 }

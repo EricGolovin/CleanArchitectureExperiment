@@ -7,46 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ED004AF82BBD5D1D00F89E13 /* AppFlow in Frameworks */ = {isa = PBXBuildFile; productRef = ED004AF72BBD5D1D00F89E13 /* AppFlow */; };
+		63A176372BC1F174008E54D7 /* AppFlow in Frameworks */ = {isa = PBXBuildFile; productRef = 63A176362BC1F174008E54D7 /* AppFlow */; };
+		63A176392BC1F174008E54D7 /* CoreUI in Frameworks */ = {isa = PBXBuildFile; productRef = 63A176382BC1F174008E54D7 /* CoreUI */; };
+		63A1763B2BC1F174008E54D7 /* DatabaseBox in Frameworks */ = {isa = PBXBuildFile; productRef = 63A1763A2BC1F174008E54D7 /* DatabaseBox */; };
+		63A1763D2BC1F174008E54D7 /* DatabaseBoxAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 63A1763C2BC1F174008E54D7 /* DatabaseBoxAPI */; };
+		63A1763F2BC1F174008E54D7 /* HomeFlow in Frameworks */ = {isa = PBXBuildFile; productRef = 63A1763E2BC1F174008E54D7 /* HomeFlow */; };
+		63A176412BC1F174008E54D7 /* HomeFlowData in Frameworks */ = {isa = PBXBuildFile; productRef = 63A176402BC1F174008E54D7 /* HomeFlowData */; };
+		63A176432BC1F174008E54D7 /* HomeFlowDataAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 63A176422BC1F174008E54D7 /* HomeFlowDataAPI */; };
+		63A176452BC1F174008E54D7 /* NetworkBox in Frameworks */ = {isa = PBXBuildFile; productRef = 63A176442BC1F174008E54D7 /* NetworkBox */; };
+		63A176472BC1F174008E54D7 /* NetworkBoxAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 63A176462BC1F174008E54D7 /* NetworkBoxAPI */; };
+		63A176492BC1F174008E54D7 /* SurveyFlow in Frameworks */ = {isa = PBXBuildFile; productRef = 63A176482BC1F174008E54D7 /* SurveyFlow */; };
+		63A1764B2BC1F174008E54D7 /* SurveyFlowData in Frameworks */ = {isa = PBXBuildFile; productRef = 63A1764A2BC1F174008E54D7 /* SurveyFlowData */; };
+		63A1764D2BC1F175008E54D7 /* SurveyFlowDataAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 63A1764C2BC1F175008E54D7 /* SurveyFlowDataAPI */; };
+		63A1764F2BC1F175008E54D7 /* TaskFlow in Frameworks */ = {isa = PBXBuildFile; productRef = 63A1764E2BC1F175008E54D7 /* TaskFlow */; };
+		63A176512BC1F175008E54D7 /* TaskFlowData in Frameworks */ = {isa = PBXBuildFile; productRef = 63A176502BC1F175008E54D7 /* TaskFlowData */; };
+		63A176532BC1F175008E54D7 /* TaskFlowDataAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 63A176522BC1F175008E54D7 /* TaskFlowDataAPI */; };
 		ED49198B2BBCD3B7004F85E6 /* HomeFlowRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED49198A2BBCD3B7004F85E6 /* HomeFlowRegistration.swift */; };
 		ED49198D2BBCD66E004F85E6 /* TaskFlowRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED49198C2BBCD66E004F85E6 /* TaskFlowRegistration.swift */; };
 		ED49198F2BBCD873004F85E6 /* SurveyFlowRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED49198E2BBCD873004F85E6 /* SurveyFlowRegistration.swift */; };
-		ED4919942BBD5CDF004F85E6 /* CoreUI in Frameworks */ = {isa = PBXBuildFile; productRef = ED4919932BBD5CDF004F85E6 /* CoreUI */; };
-		ED4919962BBD5CE3004F85E6 /* HomeFlow in Frameworks */ = {isa = PBXBuildFile; productRef = ED4919952BBD5CE3004F85E6 /* HomeFlow */; };
-		ED4919982BBD5CE6004F85E6 /* HomeFlowData in Frameworks */ = {isa = PBXBuildFile; productRef = ED4919972BBD5CE6004F85E6 /* HomeFlowData */; };
-		ED49199A2BBD5CEA004F85E6 /* SurveyFlow in Frameworks */ = {isa = PBXBuildFile; productRef = ED4919992BBD5CEA004F85E6 /* SurveyFlow */; };
-		ED49199C2BBD5CEE004F85E6 /* SurveyFlowData in Frameworks */ = {isa = PBXBuildFile; productRef = ED49199B2BBD5CEE004F85E6 /* SurveyFlowData */; };
-		ED49199E2BBD5CF4004F85E6 /* TaskFlow in Frameworks */ = {isa = PBXBuildFile; productRef = ED49199D2BBD5CF4004F85E6 /* TaskFlow */; };
-		ED4919A02BBD5CF9004F85E6 /* TaskFlowData in Frameworks */ = {isa = PBXBuildFile; productRef = ED49199F2BBD5CF9004F85E6 /* TaskFlowData */; };
-		ED4EF9CA2BBCCD5E0029E8BF /* HomeFlowDataAPI in Resources */ = {isa = PBXBuildFile; fileRef = ED4EF9BB2BBCCD5D0029E8BF /* HomeFlowDataAPI */; };
-		ED4EF9CB2BBCCD5E0029E8BF /* SurveyFlowDataAPI in Resources */ = {isa = PBXBuildFile; fileRef = ED4EF9BC2BBCCD5D0029E8BF /* SurveyFlowDataAPI */; };
-		ED4EF9CC2BBCCD5E0029E8BF /* TaskFlowDataAPI in Resources */ = {isa = PBXBuildFile; fileRef = ED4EF9BD2BBCCD5D0029E8BF /* TaskFlowDataAPI */; };
-		ED4EF9CD2BBCCD5E0029E8BF /* HomeFlowData in Resources */ = {isa = PBXBuildFile; fileRef = ED4EF9BF2BBCCD5D0029E8BF /* HomeFlowData */; };
-		ED4EF9CE2BBCCD5E0029E8BF /* SurveyFlowData in Resources */ = {isa = PBXBuildFile; fileRef = ED4EF9C02BBCCD5D0029E8BF /* SurveyFlowData */; };
-		ED4EF9CF2BBCCD5E0029E8BF /* TaskFlowData in Resources */ = {isa = PBXBuildFile; fileRef = ED4EF9C12BBCCD5D0029E8BF /* TaskFlowData */; };
-		ED4EF9D02BBCCD5E0029E8BF /* AppFlow in Resources */ = {isa = PBXBuildFile; fileRef = ED4EF9C42BBCCD5D0029E8BF /* AppFlow */; };
-		ED4EF9D12BBCCD5E0029E8BF /* HomeFlow in Resources */ = {isa = PBXBuildFile; fileRef = ED4EF9C52BBCCD5D0029E8BF /* HomeFlow */; };
-		ED4EF9D22BBCCD5E0029E8BF /* SurveyFlow in Resources */ = {isa = PBXBuildFile; fileRef = ED4EF9C62BBCCD5D0029E8BF /* SurveyFlow */; };
-		ED4EF9D32BBCCD5E0029E8BF /* TaskFlow in Resources */ = {isa = PBXBuildFile; fileRef = ED4EF9C72BBCCD5D0029E8BF /* TaskFlow */; };
 		ED99AF6A2BBC4CA9002628F2 /* CleanArchitectureExperimentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED99AF692BBC4CA9002628F2 /* CleanArchitectureExperimentApp.swift */; };
 		ED99AF6E2BBC4CAB002628F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED99AF6D2BBC4CAB002628F2 /* Assets.xcassets */; };
 		ED99AF712BBC4CAB002628F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED99AF702BBC4CAB002628F2 /* Preview Assets.xcassets */; };
 		ED99AF782BBC4CE5002628F2 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED99AF772BBC4CE5002628F2 /* DependencyContainer.swift */; };
-		EDA0A4272BBD7D07008D4D2B /* DatabaseBoxAPI in Resources */ = {isa = PBXBuildFile; fileRef = EDA0A4172BBD7D07008D4D2B /* DatabaseBoxAPI */; };
-		EDA0A4282BBD7D07008D4D2B /* NetworkBoxAPI in Resources */ = {isa = PBXBuildFile; fileRef = EDA0A4182BBD7D07008D4D2B /* NetworkBoxAPI */; };
-		EDA0A4292BBD7D07008D4D2B /* DatabaseBox in Resources */ = {isa = PBXBuildFile; fileRef = EDA0A41A2BBD7D07008D4D2B /* DatabaseBox */; };
-		EDA0A42A2BBD7D07008D4D2B /* NetworkBox in Resources */ = {isa = PBXBuildFile; fileRef = EDA0A41B2BBD7D07008D4D2B /* NetworkBox */; };
-		EDA0A42B2BBD7D07008D4D2B /* HomeFlowDataAPI in Resources */ = {isa = PBXBuildFile; fileRef = EDA0A41E2BBD7D07008D4D2B /* HomeFlowDataAPI */; };
-		EDA0A42C2BBD7D07008D4D2B /* SurveyFlowDataAPI in Resources */ = {isa = PBXBuildFile; fileRef = EDA0A41F2BBD7D07008D4D2B /* SurveyFlowDataAPI */; };
-		EDA0A42D2BBD7D07008D4D2B /* TaskFlowDataAPI in Resources */ = {isa = PBXBuildFile; fileRef = EDA0A4202BBD7D07008D4D2B /* TaskFlowDataAPI */; };
-		EDA0A42E2BBD7D07008D4D2B /* HomeFlowData in Resources */ = {isa = PBXBuildFile; fileRef = EDA0A4222BBD7D07008D4D2B /* HomeFlowData */; };
-		EDA0A42F2BBD7D07008D4D2B /* SurveyFlowData in Resources */ = {isa = PBXBuildFile; fileRef = EDA0A4232BBD7D07008D4D2B /* SurveyFlowData */; };
-		EDA0A4302BBD7D07008D4D2B /* TaskFlowData in Resources */ = {isa = PBXBuildFile; fileRef = EDA0A4242BBD7D07008D4D2B /* TaskFlowData */; };
-		EDA0A4322BBD8798008D4D2B /* DatabaseBox in Frameworks */ = {isa = PBXBuildFile; productRef = EDA0A4312BBD8798008D4D2B /* DatabaseBox */; };
-		EDA0A4342BBD87A3008D4D2B /* NetworkBox in Frameworks */ = {isa = PBXBuildFile; productRef = EDA0A4332BBD87A3008D4D2B /* NetworkBox */; };
 		EDA0A4382BBD8826008D4D2B /* NetworkBoxRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA0A4372BBD8826008D4D2B /* NetworkBoxRegistration.swift */; };
-		EDA0A43A2BBD88A8008D4D2B /* NetworkBoxAPI in Frameworks */ = {isa = PBXBuildFile; productRef = EDA0A4392BBD88A8008D4D2B /* NetworkBoxAPI */; };
-		EDA0A43C2BBD88B4008D4D2B /* DatabaseBoxAPI in Frameworks */ = {isa = PBXBuildFile; productRef = EDA0A43B2BBD88B4008D4D2B /* DatabaseBoxAPI */; };
 		EDA0A43E2BBD88FB008D4D2B /* DatabaseBoxRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA0A43D2BBD88FB008D4D2B /* DatabaseBoxRegistration.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,18 +73,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED004AF82BBD5D1D00F89E13 /* AppFlow in Frameworks */,
-				ED49199A2BBD5CEA004F85E6 /* SurveyFlow in Frameworks */,
-				EDA0A43C2BBD88B4008D4D2B /* DatabaseBoxAPI in Frameworks */,
-				ED49199E2BBD5CF4004F85E6 /* TaskFlow in Frameworks */,
-				EDA0A4342BBD87A3008D4D2B /* NetworkBox in Frameworks */,
-				ED49199C2BBD5CEE004F85E6 /* SurveyFlowData in Frameworks */,
-				ED4919982BBD5CE6004F85E6 /* HomeFlowData in Frameworks */,
-				EDA0A4322BBD8798008D4D2B /* DatabaseBox in Frameworks */,
-				ED4919942BBD5CDF004F85E6 /* CoreUI in Frameworks */,
-				EDA0A43A2BBD88A8008D4D2B /* NetworkBoxAPI in Frameworks */,
-				ED4919A02BBD5CF9004F85E6 /* TaskFlowData in Frameworks */,
-				ED4919962BBD5CE3004F85E6 /* HomeFlow in Frameworks */,
+				63A176492BC1F174008E54D7 /* SurveyFlow in Frameworks */,
+				63A1763F2BC1F174008E54D7 /* HomeFlow in Frameworks */,
+				63A176372BC1F174008E54D7 /* AppFlow in Frameworks */,
+				63A1764D2BC1F175008E54D7 /* SurveyFlowDataAPI in Frameworks */,
+				63A176392BC1F174008E54D7 /* CoreUI in Frameworks */,
+				63A176512BC1F175008E54D7 /* TaskFlowData in Frameworks */,
+				63A176532BC1F175008E54D7 /* TaskFlowDataAPI in Frameworks */,
+				63A176432BC1F174008E54D7 /* HomeFlowDataAPI in Frameworks */,
+				63A1764F2BC1F175008E54D7 /* TaskFlow in Frameworks */,
+				63A1764B2BC1F174008E54D7 /* SurveyFlowData in Frameworks */,
+				63A176412BC1F174008E54D7 /* HomeFlowData in Frameworks */,
+				63A176472BC1F174008E54D7 /* NetworkBoxAPI in Frameworks */,
+				63A176452BC1F174008E54D7 /* NetworkBox in Frameworks */,
+				63A1763D2BC1F174008E54D7 /* DatabaseBoxAPI in Frameworks */,
+				63A1763B2BC1F174008E54D7 /* DatabaseBox in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,18 +326,21 @@
 			);
 			name = CleanArchitectureExperiment;
 			packageProductDependencies = (
-				ED4919932BBD5CDF004F85E6 /* CoreUI */,
-				ED4919952BBD5CE3004F85E6 /* HomeFlow */,
-				ED4919972BBD5CE6004F85E6 /* HomeFlowData */,
-				ED4919992BBD5CEA004F85E6 /* SurveyFlow */,
-				ED49199B2BBD5CEE004F85E6 /* SurveyFlowData */,
-				ED49199D2BBD5CF4004F85E6 /* TaskFlow */,
-				ED49199F2BBD5CF9004F85E6 /* TaskFlowData */,
-				ED004AF72BBD5D1D00F89E13 /* AppFlow */,
-				EDA0A4312BBD8798008D4D2B /* DatabaseBox */,
-				EDA0A4332BBD87A3008D4D2B /* NetworkBox */,
-				EDA0A4392BBD88A8008D4D2B /* NetworkBoxAPI */,
-				EDA0A43B2BBD88B4008D4D2B /* DatabaseBoxAPI */,
+				63A176362BC1F174008E54D7 /* AppFlow */,
+				63A176382BC1F174008E54D7 /* CoreUI */,
+				63A1763A2BC1F174008E54D7 /* DatabaseBox */,
+				63A1763C2BC1F174008E54D7 /* DatabaseBoxAPI */,
+				63A1763E2BC1F174008E54D7 /* HomeFlow */,
+				63A176402BC1F174008E54D7 /* HomeFlowData */,
+				63A176422BC1F174008E54D7 /* HomeFlowDataAPI */,
+				63A176442BC1F174008E54D7 /* NetworkBox */,
+				63A176462BC1F174008E54D7 /* NetworkBoxAPI */,
+				63A176482BC1F174008E54D7 /* SurveyFlow */,
+				63A1764A2BC1F174008E54D7 /* SurveyFlowData */,
+				63A1764C2BC1F175008E54D7 /* SurveyFlowDataAPI */,
+				63A1764E2BC1F175008E54D7 /* TaskFlow */,
+				63A176502BC1F175008E54D7 /* TaskFlowData */,
+				63A176522BC1F175008E54D7 /* TaskFlowDataAPI */,
 			);
 			productName = CleanArchitectureExperminet;
 			productReference = ED99AF662BBC4CA9002628F2 /* CleanArchitectureExperiment.app */;
@@ -397,28 +386,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDA0A4282BBD7D07008D4D2B /* NetworkBoxAPI in Resources */,
-				EDA0A4272BBD7D07008D4D2B /* DatabaseBoxAPI in Resources */,
-				EDA0A4292BBD7D07008D4D2B /* DatabaseBox in Resources */,
-				EDA0A42E2BBD7D07008D4D2B /* HomeFlowData in Resources */,
-				ED4EF9D02BBCCD5E0029E8BF /* AppFlow in Resources */,
-				EDA0A4302BBD7D07008D4D2B /* TaskFlowData in Resources */,
 				ED99AF712BBC4CAB002628F2 /* Preview Assets.xcassets in Resources */,
-				EDA0A42F2BBD7D07008D4D2B /* SurveyFlowData in Resources */,
-				ED4EF9CF2BBCCD5E0029E8BF /* TaskFlowData in Resources */,
-				EDA0A42B2BBD7D07008D4D2B /* HomeFlowDataAPI in Resources */,
-				ED4EF9CC2BBCCD5E0029E8BF /* TaskFlowDataAPI in Resources */,
 				ED99AF6E2BBC4CAB002628F2 /* Assets.xcassets in Resources */,
-				ED4EF9D12BBCCD5E0029E8BF /* HomeFlow in Resources */,
-				ED4EF9CD2BBCCD5E0029E8BF /* HomeFlowData in Resources */,
-				EDA0A42D2BBD7D07008D4D2B /* TaskFlowDataAPI in Resources */,
-				ED4EF9D32BBCCD5E0029E8BF /* TaskFlow in Resources */,
-				ED4EF9CA2BBCCD5E0029E8BF /* HomeFlowDataAPI in Resources */,
-				ED4EF9CB2BBCCD5E0029E8BF /* SurveyFlowDataAPI in Resources */,
-				EDA0A42A2BBD7D07008D4D2B /* NetworkBox in Resources */,
-				EDA0A42C2BBD7D07008D4D2B /* SurveyFlowDataAPI in Resources */,
-				ED4EF9CE2BBCCD5E0029E8BF /* SurveyFlowData in Resources */,
-				ED4EF9D22BBCCD5E0029E8BF /* SurveyFlow in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,53 +614,65 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		ED004AF72BBD5D1D00F89E13 /* AppFlow */ = {
+		63A176362BC1F174008E54D7 /* AppFlow */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppFlow;
 		};
-		ED4919932BBD5CDF004F85E6 /* CoreUI */ = {
+		63A176382BC1F174008E54D7 /* CoreUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CoreUI;
 		};
-		ED4919952BBD5CE3004F85E6 /* HomeFlow */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = HomeFlow;
-		};
-		ED4919972BBD5CE6004F85E6 /* HomeFlowData */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = HomeFlowData;
-		};
-		ED4919992BBD5CEA004F85E6 /* SurveyFlow */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SurveyFlow;
-		};
-		ED49199B2BBD5CEE004F85E6 /* SurveyFlowData */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SurveyFlowData;
-		};
-		ED49199D2BBD5CF4004F85E6 /* TaskFlow */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = TaskFlow;
-		};
-		ED49199F2BBD5CF9004F85E6 /* TaskFlowData */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = TaskFlowData;
-		};
-		EDA0A4312BBD8798008D4D2B /* DatabaseBox */ = {
+		63A1763A2BC1F174008E54D7 /* DatabaseBox */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DatabaseBox;
 		};
-		EDA0A4332BBD87A3008D4D2B /* NetworkBox */ = {
+		63A1763C2BC1F174008E54D7 /* DatabaseBoxAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DatabaseBoxAPI;
+		};
+		63A1763E2BC1F174008E54D7 /* HomeFlow */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HomeFlow;
+		};
+		63A176402BC1F174008E54D7 /* HomeFlowData */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HomeFlowData;
+		};
+		63A176422BC1F174008E54D7 /* HomeFlowDataAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HomeFlowDataAPI;
+		};
+		63A176442BC1F174008E54D7 /* NetworkBox */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NetworkBox;
 		};
-		EDA0A4392BBD88A8008D4D2B /* NetworkBoxAPI */ = {
+		63A176462BC1F174008E54D7 /* NetworkBoxAPI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NetworkBoxAPI;
 		};
-		EDA0A43B2BBD88B4008D4D2B /* DatabaseBoxAPI */ = {
+		63A176482BC1F174008E54D7 /* SurveyFlow */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = DatabaseBoxAPI;
+			productName = SurveyFlow;
+		};
+		63A1764A2BC1F174008E54D7 /* SurveyFlowData */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SurveyFlowData;
+		};
+		63A1764C2BC1F175008E54D7 /* SurveyFlowDataAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SurveyFlowDataAPI;
+		};
+		63A1764E2BC1F175008E54D7 /* TaskFlow */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TaskFlow;
+		};
+		63A176502BC1F175008E54D7 /* TaskFlowData */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TaskFlowData;
+		};
+		63A176522BC1F175008E54D7 /* TaskFlowDataAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TaskFlowDataAPI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -14,20 +14,19 @@ import SurveyFlow
 
 extension DependencyContainer {
     
-    func provideHomeCoordinator(navigationContainer: NavigationContainer) -> HomeCoordinator<TaskCoordinatorView, SurveyCoordinatorView, SurveyCoordinatorView> {
+    typealias HomeFlowCoordinator = HomeCoordinator<TaskCoordinator, SurveyCoordinator, SurveyCoordinator>
+    
+    func provideHomeCoordinator(navigationContainer: NavigationContainer) -> HomeFlowCoordinator {
         let repository = HomeUseCaseRepositoryImpl(networkService: resolve())
         let useCase = HomeUseCaseImpl(repository: repository)
         let viewModel = HomeViewModel(useCase: useCase)
         
         let coordinator = HomeCoordinator(navigationContainer: navigationContainer, viewModel: viewModel) {
-            let coordinator = self.provideTaskCoordinator()
-            return TaskCoordinatorView(coordinator: coordinator)
-        } onboardingView: { onDismiss in
-            let coordinator = self.provideSurveyCoordinator(onDismiss: onDismiss)
-            return SurveyCoordinatorView(coordinator: coordinator)
-        } surveyView: { onDismiss in
-            let coordinator = self.provideSurveyCoordinator(onDismiss: onDismiss)
-            return SurveyCoordinatorView(coordinator: coordinator)
+            self.provideTaskCoordinator()
+        } onboardingCoordinator: { onDismiss in
+            self.provideSurveyCoordinator(onDismiss: onDismiss)
+        } surveyCoordinator: { onDismiss in
+            self.provideSurveyCoordinator(onDismiss: onDismiss)
         }
         viewModel.delegate = coordinator
         
